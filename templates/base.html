@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
+    <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="static/css/style.css">
     <title>Cookbook</title>
 </head>
 <body>
     <header>
+        <!-- Top Navbar  -->
         <nav>
             <div class="nav-wrapper brown darken-2">
                 <a href="#" class="right brand-logo cookbook-logo"> Cookbook <i class="fas fa-cookie-bite prefix"></i></a>
@@ -26,14 +30,14 @@
                     <li><a href="#">Register</a></li>
                 </ul>
             </div>
-          </nav>
-
+        </nav>
+        <!-- Mobile dropdown menu -->
         <ul class="dropdown-content" id="dropdown1">
             <li><a href="#" class="brown-text">Recipes</a></li>
             <li><a href="#" class="brown-text">Search</a></li>
             <li><a href="#" class="brown-text">Log In</a></li>
             <li><a href="#" class="brown-text">Register</a></li>
-          </ul>
+        </ul>
     </header>
     <main>
         {% block content %}
