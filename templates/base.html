@@ -30,8 +30,8 @@
                         <li data-target="dropdown2" class="dropdown-trigger">User: <strong>{{ session.user }}</strong></li>
                         <li class="dropdown-content brown" id="dropdown2"><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -43,8 +43,8 @@
             {% if session.user %}
                 <li><a href="{{ url_for('logout') }}" class="brown-text">Log Out</a></li>
             {% else %}
-            <li><a href="{{ url_for('login') }}" class="brown-text">Log In</a></li>
-            <li><a href="{{ url_for('register') }}" class="brown-text">Register</a></li>
+                <li><a href="{{ url_for('login') }}" class="brown-text">Log In</a></li>
+                <li><a href="{{ url_for('register') }}" class="brown-text">Register</a></li>
             {% endif %}
         </ul>
     </header>
