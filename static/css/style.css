@@ -1,3 +1,25 @@
+:root {
+    --fontTitle: 'Lobster', cursive;
+    --colorBG: #9972662e;
+    --colorAccentLight: #5d4037;
+}
+
+body {
+    background-color: var(--colorBG);
+}
+
 .cookbook-logo {
     margin: 0 10px;
+}
+
+#dropdown1 {
+    margin-top: 64px;
+}
+
+.title {
+    font-family: var(--fontTitle);
+    font-size: 4.92rem;
+    color: var(--colorAccentLight);
+    text-shadow: -4px -1px 6px rgb(0 0 0 / 30%);
+    margin: 4rem 0;
 }
