@@ -26,8 +26,11 @@
                 <ul class="left hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
                     <li><a href="#">Search</a></li>
+                    {% if session.user %}
+                    {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -35,8 +38,12 @@
         <ul class="dropdown-content" id="dropdown1">
             <li><a href="{{ url_for('get_recipes') }}" class="brown-text">Recipes</a></li>
             <li><a href="#" class="brown-text">Search</a></li>
+            {% if session.user %}
+                <li><a href="{{ url_for('logout') }}" class="brown-text">Log Out</a></li>
+            {% else %}
             <li><a href="{{ url_for('login') }}" class="brown-text">Log In</a></li>
             <li><a href="{{ url_for('register') }}" class="brown-text">Register</a></li>
+            {% endif %}
         </ul>
     </header>
     <section>
