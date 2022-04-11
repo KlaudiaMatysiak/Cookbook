@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row valign-wrapper">
+        <img src="{{ recipe.image }}" class="col s12 m4 small-img">
+        <div class="col s12 m8">
+            <h3 class="center-align title">{{ recipe.title }}</h3>
+        </div>
+    </div>
+    <div class="row card-panel brown lighten-2">
+        <div class="col s12 m8">
+            <h4>Method:</h4>
+            <ul>
+                {% for method in recipe.method %}
+                <li>
+                    {{ method }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col s12 m4">
+            <h4>Ingredients:</h4>
+            <ul>
+                {% for ingredient in recipe.ingredients %}
+                <li>
+                    {{ ingredient }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
