@@ -126,6 +126,13 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+@app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
+def show_recipe(recipe_id):
+    """Check full recipe page"""
+    title = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("show_recipe.html", recipe=title)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
