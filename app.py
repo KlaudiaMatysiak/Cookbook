@@ -44,6 +44,8 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Registration Succesfull!")
+        return redirect(url_for("get_recipes"))
+
     return render_template("register.html")
 
 
