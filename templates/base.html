@@ -26,7 +26,6 @@
                 <ul class="left hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
-                    <li><a href="#">Search</a></li>
                     {% if session.user %}
                         <li data-target="dropdown2" class="dropdown-trigger user"><strong>{{ session.user }}</strong></li>
                         <ul class="dropdown-content brown" id="dropdown2">
@@ -44,7 +43,6 @@
         <ul class="dropdown-content" id="dropdown1">
             <li><a href="{{ url_for('home') }}" class="brown-text">Home</a></li>
             <li><a href="{{ url_for('get_recipes') }}" class="brown-text">Recipes</a></li>
-            <li><a href="#" class="brown-text">Search</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('add_recipe') }}" class="brown-text">Add recipe</a></li>
                 <li><a href="{{ url_for('logout') }}" class="brown-text">Log Out</a></li>
