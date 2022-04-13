@@ -5,10 +5,12 @@
     --colorAccentDark: #4c352e;
 }
 
+
 body {
     background-color: var(--colorBG);
 }
 
+/* Navbar styling */
 .cookbook-logo {
     margin: 0 10px;
 }
@@ -21,14 +23,6 @@ body {
     margin-top: 64px;
 }
 
-.title {
-    font-family: var(--fontTitle);
-    font-size: 4.92rem;
-    color: var(--colorAccentLight);
-    text-shadow: -4px -1px 6px rgb(0 0 0 / 30%);
-    margin: 4rem 0;
-}
-
 ul[id^=dropdown].dropdown-content {
     width: fit-content !important;
 }
@@ -37,6 +31,16 @@ ul[id^=dropdown].dropdown-content {
     background-color: rgba(121,85,72,0.75);
 }
 
+/* General style for titles */
+.title {
+    font-family: var(--fontTitle);
+    font-size: 4.92rem;
+    color: var(--colorAccentLight);
+    text-shadow: -4px -1px 6px rgb(0 0 0 / 30%);
+    margin: 4rem 0;
+}
+
+/* Recipes styling */
 .card .card-image .card-title {
     width: 100%;
     background-color: rgba(121,85,72,0.75);
@@ -60,11 +64,13 @@ ul[id^=dropdown].dropdown-content {
     padding: 10px 0;
 }
 
+/* Modal styling */
 .modal-content > p {
     font-size: 24px;
     color: var(--colorAccentLight);
 }
 
+/* Footer styling */
 .page-footer {
     background-color: var(--colorAccentDark);
 }
