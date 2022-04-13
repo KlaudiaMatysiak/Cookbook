@@ -43,6 +43,10 @@ ul[id^=dropdown].dropdown-content {
     object-fit: cover;
 }
 
+.search-panel {
+    padding: 0;
+    margin-top: 5%;
+}
 
 .show-recipe-header {
     margin: 7% 0;
