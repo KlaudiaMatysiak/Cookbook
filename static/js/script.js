@@ -5,5 +5,6 @@ $(document).ready(function(){
       inDuration: 800
     });
     $('.modal').modal();
+    $('.parallax').parallax();
   });
   
