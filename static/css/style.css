@@ -56,6 +56,11 @@ ul[id^=dropdown].dropdown-content {
     padding: 10px 0;
 }
 
+.modal-content > p {
+    font-size: 24px;
+    color: var(--colorAccentLight);
+}
+
 .page-footer {
     background-color: var(--colorAccentDark);
 }
