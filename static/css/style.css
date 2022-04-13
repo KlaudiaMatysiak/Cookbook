@@ -2,6 +2,7 @@
     --fontTitle: 'Lobster', cursive;
     --colorBG: #9972662e;
     --colorAccentLight: #5d4037;
+    --colorAccentDark: #4c352e;
 }
 
 body {
@@ -40,4 +41,24 @@ ul[id^=dropdown].dropdown-content {
 .card .card-image img {
     height: 30vh;
     object-fit: cover;
+}
+
+.page-footer {
+    background-color: var(--colorAccentDark);
+}
+
+.social {
+    font-size: 4rem;
+}
+
+.youtube {
+    color: #ff0000;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.discord {
+    color: #5865f2;
 }
