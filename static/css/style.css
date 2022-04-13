@@ -13,6 +13,10 @@ body {
     margin: 0 10px;
 }
 
+.user {
+    padding: 0 15px;
+}
+
 #dropdown1 {
     margin-top: 64px;
 }
