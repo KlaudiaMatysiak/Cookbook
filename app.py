@@ -1,4 +1,5 @@
 import os
+from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -15,6 +16,19 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+# @login_required decorator
+# https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
+def login_required(f):
+    """Login required decorator used for page where user has to be logged in to access the page"""
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if "user" not in session:
+            flash("You are not authorized to access this page.")
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+    return decorated_function
 
 
 @app.route("/")
@@ -96,6 +110,7 @@ def logout():
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
+@login_required
 def add_recipe():
     """Adding recipe to db"""
     if request.method == "POST":
@@ -113,6 +128,7 @@ def add_recipe():
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@login_required
 def edit_recipe(recipe_id):
     """Edit the recipe"""
     if request.method == "POST":
@@ -133,6 +149,7 @@ def edit_recipe(recipe_id):
 
 
 @app.route("/delete_recipe/<recipe_id>")
+@login_required
 def delete_recipe(recipe_id):
     """Delete a recipe"""
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
