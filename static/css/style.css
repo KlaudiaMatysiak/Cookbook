@@ -43,6 +43,15 @@ ul[id^=dropdown].dropdown-content {
     object-fit: cover;
 }
 
+
+.show-recipe-header {
+    margin: 7% 0;
+}
+
+.method-li {
+    padding: 10px 0;
+}
+
 .page-footer {
     background-color: var(--colorAccentDark);
 }
