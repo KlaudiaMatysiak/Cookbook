@@ -37,10 +37,12 @@ I choose main color of brown darken-2 (#5d4037) from materialize color palette a
 
 I created wireframes in the Balsamiq program as first visual concept of the website.
 
-+ Mobile wireframe - [PDF file here](/documentation/mobile_wireframe.pdf)
+Mobile wireframe - [PDF file here](/documentation/mobile_wireframe.pdf)
+
 ![Mobile wireframe](/documentation/mobile_wireframe.png)
 
-+ Desktop wireframe - [PDF file here](/documentation/desktop_wireframe.pdf)
+Desktop wireframe - [PDF file here](/documentation/desktop_wireframe.pdf)
+
 ![Desktop wireframe](/documentation/desktop_wireframe.png)
 
 # Database
