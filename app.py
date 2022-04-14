@@ -135,7 +135,7 @@ def edit_recipe(recipe_id):
         recipe = {
             "title": request.form.get("title"),
             "ingredients": request.form.get("ingredients").splitlines(),
-            "method": request.form.get("method"),
+            "method": request.form.get("method").splitlines(),
             "image": request.form.get("image"),
             "added_by": session["user"]
         }
