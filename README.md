@@ -23,3 +23,9 @@ The website is desgined to gather all people that loves baking delicious sweets.
     + As a Returning Visitor, I can create recipe so other can view it.
     + As a Returning Visitor, I can edit recipe to change any mistakes.
     + As a Returning Visitor, I can delete recipe.
+
+## Desgin
+
+![Color Pallette](/documentation/palette.png)
+
+I choose main color of brown darken-2 (#5d4037) from materialize color palette and added lighter or darker tones to make sure that works well togheter on to the website. 
