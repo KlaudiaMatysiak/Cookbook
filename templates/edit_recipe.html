@@ -14,21 +14,13 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>
-                        {% for ingredient in recipe.ingredients %}
-                            {{ ingredient }}
-                        {% endfor %}
-                    </textarea>
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>{{ recipe.ingredients|join("\n") }}</textarea>
                     <label for="ingredients">Ingredients</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                    <textarea id="method" name="method" class="materialize-textarea" required>
-                        {% for method in recipe.method %}
-                            {{ method }}
-                        {% endfor %}
-                    </textarea>
+                    <textarea id="method" name="method" class="materialize-textarea" required>{{ recipe.method }}</textarea>
                     <label for="method">Method</label>
                     </div>
                 </div>
