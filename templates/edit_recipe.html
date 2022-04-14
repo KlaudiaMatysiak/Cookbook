@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                    <textarea id="method" name="method" class="materialize-textarea" required>{{ recipe.method }}</textarea>
+                    <textarea id="method" name="method" class="materialize-textarea" required>{{ recipe.method|join("\n") }}</textarea>
                     <label for="method">Method</label>
                     </div>
                 </div>
