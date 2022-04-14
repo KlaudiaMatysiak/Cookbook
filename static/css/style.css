@@ -82,6 +82,10 @@ ul[id^=dropdown].dropdown-content {
     background-color: var(--colorAccentDark);
 }
 
+footer > div.container > div > div > h1 {
+    font-size: 24px;
+}
+
 .social {
     font-size: 4rem;
 }
