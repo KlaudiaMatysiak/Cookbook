@@ -24,6 +24,9 @@ The website is desgined to gather all people that loves baking delicious sweets.
     + As a Returning Visitor, I can edit recipe to change any mistakes.
     + As a Returning Visitor, I can delete recipe.
 
++ Admin:
+    + As a Admin, I can edit and delete all the recipes to maintain content of the page.
+
 ## Desgin
 
 ![Color Pallette](/documentation/palette.png)
