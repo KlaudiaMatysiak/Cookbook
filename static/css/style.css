@@ -97,3 +97,9 @@ ul[id^=dropdown].dropdown-content {
 .discord {
     color: #5865f2;
 }
+
+@media only screen and (max-width: 600px) {
+    a.right.brand-logo.cookbook-logo > i {
+        line-height: 56px;
+    }
+}
