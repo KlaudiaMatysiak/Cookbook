@@ -39,3 +39,24 @@ I created wireframes in the Balsamiq program as first visual concept of the webs
 
 + Desktop wireframe - [PDF file here](/documentation/desktop_wireframe.pdf)
 ![Desktop wireframe](/documentation/desktop_wireframe.png)
+
+# Database
+
+## Data Types
+The types of data stored in MongoDB are:
+* ObjectId
+* String
+* Array
+* Binary
+
+## Collection Structure
+Cookbook relies on two database collections. 
+
+### Users Collection
+Password is entered as string, but stored as binary after encryption trough security werkzeug tool. To log in user - password from database is encrypted to check match with inserted data in the login form.
+
+![Users collection](/documentation/users-coll.png)
+
+
+### Recipes Collection
+![Recipe collection](/documentation/recipe-coll.png)
