@@ -47,6 +47,10 @@ ul[id^=dropdown].dropdown-content {
     margin: 4rem 0;
 }
 
+.btn-large {
+    margin: 10px 0 20px 0;
+}
+
 /* Recipes styling */
 .card .card-image .card-title {
     width: 100%;
