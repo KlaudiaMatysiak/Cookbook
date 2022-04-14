@@ -29,3 +29,13 @@ The website is desgined to gather all people that loves baking delicious sweets.
 ![Color Pallette](/documentation/palette.png)
 
 I choose main color of brown darken-2 (#5d4037) from materialize color palette and added lighter or darker tones to make sure that works well togheter on to the website. 
+
+## Wireframes
+
+I created wireframes in the Balsamiq program as first visual concept of the website.
+
++ Mobile wireframe - [PDF file here](/documentation/mobile_wireframe.pdf)
+![Mobile wireframe](/documentation/mobile_wireframe.png)
+
++ Desktop wireframe - [PDF file here](/documentation/desktop_wireframe.pdf)
+![Desktop wireframe](/documentation/desktop_wireframe.png)
