@@ -47,16 +47,18 @@
                             </div>
                         </div>
                     </div>
-                    <div id="modal-{{ recipe._id }}" class="modal">
-                        <div class="modal-content center-align">
-                            <h4 class="title">Delete Recipe</h4>
-                            <p>Are you sure?</p>
+                    {% if session.user|lower == recipe.added_by|lower or session.user|lower == "admin"|lower %}
+                        <div id="modal-{{ recipe._id }}" class="modal">
+                            <div class="modal-content center-align">
+                                <h4 class="title">Delete Recipe</h4>
+                                <p>Are you sure?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red lighten-2">Yes</a>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red lighten-2">Yes</a>
-                        </div>
-                    </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         {% else %}
