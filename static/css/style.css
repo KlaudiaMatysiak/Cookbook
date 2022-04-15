@@ -52,6 +52,10 @@ ul[id^=dropdown].dropdown-content {
 }
 
 /* Recipes styling */
+.card {
+    min-height: 50vh;
+}
+
 .card .card-image .card-title {
     width: 100%;
     background-color: rgba(121,85,72,0.75);
