@@ -148,7 +148,8 @@ def edit_recipe(recipe_id):
             mongo.db.recipes.replace_one(
                 {"_id": ObjectId(recipe_id)}, recipe)
             flash("Recipe successfully updated!")
-            return redirect(url_for("get_recipes"))
+            title = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+            return render_template("show_recipe.html", recipe=title)
 
         return render_template("edit_recipe.html", recipe=recipe)
     flash("You are not authorized to access this page.")
