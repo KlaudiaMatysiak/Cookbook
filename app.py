@@ -91,11 +91,11 @@ def login():
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for("get_recipes"))
             else:
-                flash("Incorrect Username and/or PASSWORD")
+                flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            flash("Incorrect USERNAME and/or Password")
+            flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
