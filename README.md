@@ -96,6 +96,56 @@ Password is entered as string, but stored as binary after encryption trough secu
 # Testing
 * The testing section is in a separate file, [here](TESTING.md).
 
+# Deployment
+
+## Deploying on Heroku
+To deploy this page to Heroku from its GitHub repository, the following steps were taken:
+1. Prepare files needed:
+    - Create requirements.txt with command
+    ```bash
+    pip3 freeze --local > requirements.txt
+    ```
+    - Create Procfile
+    ```bash
+    echo web: python app.py > Procfile
+    ```
+
+2. Create the Heroku App:
+    - Select "Create new app" in Heroku.
+    - Choose a name for your app and select the region.
+
+3. Connect with GitHub account:
+    - Select "Deploy" option in Heroku tab.
+    - Deployment method: Connect to GitHub
+    - Search for repository name and Connect
+
+3. Prepare the environment:
+    - In your GitPod workspace, create an env.py file in the main directory. 
+    - Add the MONGO_URI value and your chosen SECRET_KEY value to the env.py file.
+    - In the Settings tab, click on Reveal Config Vars.
+    - Add the SECRET_KEY and MONGO_URI values to the Config Vars in Heroku.
+
+4. Automatic deploys:
+    - Select "Enable Automatic Deploys"
+
+5. Manual deploy:
+    - Choose main/master brunch and select "Deploy Branch"
+
+## Forking
+1. Sign in to Github and go to my [repository](https://github.com/KlaudiaMatysiak/Cookbook)
+2. Select the Fork button at the top right of the page.
+3. The fork is now in your repositories.
+
+## Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/KlaudiaMatysiak/Cookbook.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KlaudiaMatysiak/Cookbook)
+
 # Credits
 
 ## Images and recipes
