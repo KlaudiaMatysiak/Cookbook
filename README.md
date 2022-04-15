@@ -93,6 +93,9 @@ Password is entered as string, but stored as binary after encryption trough secu
 + [Tinypng](https://tinypng.com/) - Tinypng was used to compress images.
 + [IMGbb](https://imgbb.com/) - IMGbb was used to upload the hero image with chocolate muffins.
 
+# Testing
+* The testing section is in a separate file, [here](TESTING.md).
+
 # Credits
 
 ## Images and recipes
