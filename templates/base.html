@@ -56,7 +56,7 @@
             {% endif %}
         </ul>
     </header>
-    <section>
+    <div>
         <!-- Flash messages -->
         {% for message in get_flashed_messages() %}
         <div class="row">
@@ -67,7 +67,7 @@
             </div>
           </div>
         {% endfor %}
-    </section>
+    </div>
     <main>
         {% block content %}
         {% endblock %}
