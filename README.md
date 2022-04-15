@@ -93,3 +93,16 @@ Password is entered as string, but stored as binary after encryption trough secu
 + [Tinypng](https://tinypng.com/) - Tinypng was used to compress images.
 + [IMGbb](https://imgbb.com/) - IMGbb was used to upload the hero image with chocolate muffins.
 
+# Credits
+
+## Images and recipes
+| Link to the image | Image | Where is it used on the project? |
+|:---:|:---:|:---:|
+|[Click here](https://beszamel.se.pl/przepisy/ciastka-i-ciasteczka/przepis-na-babeczki-czekoladowe-z-borowkami-re-3Qt5-gja7-Yhzw.html) | Chocolate muffins with blueberries | Home Page
+|[Click here](https://unsplash.com/photos/vdx5hPQhXFk) | White chocolate cake | Home Page
+|[Click here](https://realfood.tesco.com/recipes/chocolate-muffins.html) | Chocolate muffins on the baking tray | Recipes Page
+|[Click here](https://www.goodto.com/recipes/chocolate-cookies) | Stack of chocolate cookies | Recipes Page
+|[Click here](https://www.loveandlemons.com/brownies-recipe/) | Chocolate brownie | Recipes Page
+|[Click here](https://realfood.tesco.com/recipes/bakewell-tart.html) | Bakewell tart | Recipes Page
+|[Click here](https://www.goodto.com/recipes/easy-raspberry-muffins) | Raspberry muffins | Recipes Page
+|[Click here](https://www.recipetineats.com/lemon-tart/) | Lemon Tart | Recipes Page
