@@ -65,3 +65,31 @@ Password is entered as string, but stored as binary after encryption trough secu
 
 ### Recipes Collection
 ![Recipe collection](/documentation/recipe-coll.png)
+
+# Technologies Used
+
+## Languages Used
++ HTML5
++ CSS3
++ JavaScript
++ Python
+
+## Libraries and Programs Used
++ [Git](https://git-scm.com/) - Git was used for version control.
++ [GitHub](https://github.com/) - GitHub was used for storing code and deploying the site.
++ [Gitpod](https://www.gitpod.io/) - GitPod was used for  building and editing my code.
++ [Heroku](https://www.heroku.com/) - Heroku was used to deploy the project.
++ [Flask framework](https://flask.palletsprojects.com/en/2.1.x/) - Flask was used to back end application and interaction with front end.
++ [Jinja2 templating](https://jinja.palletsprojects.com/en/2.11.x/templates/) - Jinja2 was used to iterate through data from backend for correct rendering on the front end.
++ [MaterializeCSS](https://materializecss.com/) - MaterializeCSS was used to desgin responsive website.
++ [jQuery](https://jquery.com/) - jQuery was used to implement JavaScript from Materialize library.
++ [MongoDB](https://www.mongodb.com/) - MongoDB was used to store recipes and users collections in the database.
++ [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - Chrome Developer Tools was used to help fix problem areas and identify bugs.
++ [Font Awesome](https://fontawesome.com/) - The icons for cookie logo, social media and buttons were taken from Font Awesome.
++ [Google Fonts](https://fonts.google.com/) - The font 'Lobster' cursive was imported from Google Fonts.
++ [CSS root variables](https://css-tricks.com/breaking-css-custom-properties-out-of-root-might-be-a-good-idea/) - CSS root variables was used to store global styling in it.
++ [Balsamiq](https://balsamiq.com/) - Balsamiq was used to make Desktop and Mobile Wireframes.
++ [Am I Responsive?](http://ami.responsivedesign.is/#) - Website used to create mockup image for this README file.
++ [Tinypng](https://tinypng.com/) - Tinypng was used to compress images.
++ [IMGbb](https://imgbb.com/) - IMGbb was used to upload the hero image with chocolate muffins.
+
