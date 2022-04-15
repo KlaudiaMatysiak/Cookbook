@@ -2,7 +2,8 @@
 
 The website is desgined to gather all people that loves baking delicious sweets. The focus of the website is to allow users to upload own recipes to share with others in this community. 
 
-![Mockup](/documentation/mockup.png)
+![Mockup](documentation/mockup.png)
+
 
 [View the live project here](https://cookbook-km.herokuapp.com/home)
 
@@ -29,7 +30,7 @@ The website is desgined to gather all people that loves baking delicious sweets.
 
 ## Desgin
 
-![Color Pallette](/documentation/palette.png)
+![Color Pallette](documentation/palette.png)
 
 I choose main color of brown darken-2 (#5d4037) from materialize color palette and added lighter or darker tones to make sure that works well togheter on to the website. 
 
@@ -37,13 +38,13 @@ I choose main color of brown darken-2 (#5d4037) from materialize color palette a
 
 I created wireframes in the Balsamiq program as first visual concept of the website.
 
-Mobile wireframe - [PDF file here](/documentation/mobile_wireframe.pdf)
+Mobile wireframe - [PDF file here](documentation/mobile_wireframe.pdf)
 
-![Mobile wireframe](/documentation/mobile_wireframe.png)
+![Mobile wireframe](documentation/mobile_wireframe.png)
 
-Desktop wireframe - [PDF file here](/documentation/desktop_wireframe.pdf)
+Desktop wireframe - [PDF file here](documentation/desktop_wireframe.pdf)
 
-![Desktop wireframe](/documentation/desktop_wireframe.png)
+![Desktop wireframe](documentation/desktop_wireframe.png)
 
 # Database
 
@@ -60,11 +61,11 @@ Cookbook relies on two database collections.
 ### Users Collection
 Password is entered as string, but stored as binary after encryption trough security werkzeug tool. To log in user - password from database is encrypted to check match with inserted data in the login form.
 
-![Users collection](/documentation/users-coll.png)
+![Users collection](documentation/users-coll.png)
 
 
 ### Recipes Collection
-![Recipe collection](/documentation/recipe-coll.png)
+![Recipe collection](documentation/recipe-coll.png)
 
 # Technologies Used
 
