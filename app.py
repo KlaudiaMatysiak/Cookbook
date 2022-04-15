@@ -131,29 +131,35 @@ def add_recipe():
 @login_required
 def edit_recipe(recipe_id):
     """Edit the recipe"""
-    if request.method == "POST":
-        recipe = {
-            "title": request.form.get("title"),
-            "ingredients": request.form.get("ingredients").splitlines(),
-            "method": request.form.get("method").splitlines(),
-            "image": request.form.get("image"),
-            "added_by": session["user"]
-        }
-        mongo.db.recipes.replace_one(
-            {"_id": ObjectId(recipe_id)}, recipe)
-        flash("Recipe successfully updated!")
-        return redirect(url_for("get_recipes"))
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if session['user'].lower() == recipe["added_by"].lower():
+        if request.method == "POST":
+            recipe = {
+                "title": request.form.get("title"),
+                "ingredients": request.form.get("ingredients").splitlines(),
+                "method": request.form.get("method").splitlines(),
+                "image": request.form.get("image"),
+                "added_by": session["user"]
+            }
+            mongo.db.recipes.replace_one(
+                {"_id": ObjectId(recipe_id)}, recipe)
+            flash("Recipe successfully updated!")
+            return redirect(url_for("get_recipes"))
 
-    find_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("edit_recipe.html", recipe=find_recipe)
+        return render_template("edit_recipe.html", recipe=recipe)
+    flash("You are not authorized to access this page.")
+    return redirect(url_for("get_recipes"))
 
 
 @app.route("/delete_recipe/<recipe_id>")
 @login_required
 def delete_recipe(recipe_id):
     """Delete a recipe"""
-    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
-    flash("Recipe Successfully Deleted!")
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if session['user'].lower() == recipe["added_by"].lower():
+        mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
+        flash("Recipe Successfully Deleted!")
+    flash("You are not authorized to access this page.")
     return redirect(url_for("get_recipes"))
 
 
