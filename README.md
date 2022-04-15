@@ -169,3 +169,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 |[Click here](https://realfood.tesco.com/recipes/bakewell-tart.html) | Bakewell tart | Recipes Page
 |[Click here](https://www.goodto.com/recipes/easy-raspberry-muffins) | Raspberry muffins | Recipes Page
 |[Click here](https://www.recipetineats.com/lemon-tart/) | Lemon Tart | Recipes Page
+
+## Code
++ Code was inspired by the Task Manager mini project tutorials by Tim Nelson.
++ [Login required decorator](https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator) - Login required decorator was used to make sure that user won't see conent that shouldn't have access to it, like edit or delete recipe.
