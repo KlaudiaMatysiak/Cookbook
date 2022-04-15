@@ -111,25 +111,34 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
     echo web: python app.py > Procfile
     ```
 
-2. Create the Heroku App:
+2. MongoDB
+    - Create account on the mongoDB.
+    - Create a shared claster (free).
+    - Choose a name and closest region.
+    - Add user and give him privilages to read and write any database.
+    - Add IP address
+    - In the Cluster tab create database of "Cookbook" and add two collections of "users" and "recipes"
+    - In the "Overview" tab select "Connect" button. Select "Connect your application". Make sure to select correct driver and version - "Python" and "3.6 or later". Copy connection string which is your MONGO_URI with correct user name, password and database name.
+
+3. Create the Heroku App:
     - Select "Create new app" in Heroku.
     - Choose a name for your app and select the region.
 
-3. Connect with GitHub account:
+4. Connect with GitHub account:
     - Select "Deploy" option in Heroku tab.
     - Deployment method: Connect to GitHub
     - Search for repository name and Connect
 
-3. Prepare the environment:
+5. Prepare the environment:
     - In your GitPod workspace, create an env.py file in the main directory. 
     - Add the MONGO_URI value and your chosen SECRET_KEY value to the env.py file.
     - In the Settings tab, click on Reveal Config Vars.
-    - Add the SECRET_KEY and MONGO_URI values to the Config Vars in Heroku.
+    - Add the IP, PORT, SECRET_KEY and MONGO_URI values to the Config Vars in Heroku.
 
-4. Automatic deploys:
+6. Automatic deploys:
     - Select "Enable Automatic Deploys"
 
-5. Manual deploy:
+7. Manual deploy:
     - Choose main/master brunch and select "Deploy Branch"
 
 ## Forking
