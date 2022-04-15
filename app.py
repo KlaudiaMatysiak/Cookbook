@@ -7,7 +7,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
-    import env
+    import env  # noqa
 
 app = Flask(__name__)
 
@@ -19,9 +19,12 @@ mongo = PyMongo(app)
 
 
 # @login_required decorator
-# https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator
+# https://flask.palletsprojects.com/en/2.0.x/patterns/viewdecorators/#login-required-decorator  # noqa
 def login_required(f):
-    """Login required decorator used for page where user has to be logged in to access the page"""
+    """
+    Login required decorator used for page
+    where user has to be logged in to access the page
+    """
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if "user" not in session:
@@ -86,10 +89,11 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for("get_recipes"))
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for("get_recipes"))
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
