@@ -168,3 +168,56 @@ Direct links:
 
 ![iPhone 12 Pro](documentation/ihpone12pro.jpg)
 
+# Bugs
+
+## Fixed
+
+1. CSS and JavaScript files not connected.
+
+    Edit recipe templated wasn't connecting with CSS and JavaScript files. I fixed it by replacing relative path with jinja url_for function in the base.html file. 
+
+    ```
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    ```
+
+    ```
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    ```
+
+    ![CSS and JavaScript](documentation/css-javascript.png)
+
+2. Unnecessary whitespaces from Jinja rendered template
+
+    While it was rendering data from mongodb there was plenty unnecessary whitespaces. I've tried to use minus symbol in the beginnig and in the end of jinja template but it wasn't working. Instead of using for loop I read array from database with join function.
+
+    Instead:
+
+    ```
+    {%- for ingredient in ingredient -%}
+        {{ ingredient }}
+    {%- endfor -%} 
+    ```
+    I implemented code:
+    ```
+    <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>{{ recipe.ingredients|join("\n") }}</textarea>
+    ```
+
+    ![Unnecessary whitespaces](documentation/edit-recipe-bug.png)
+
+3. Visible delete recipe modal in source code
+
+    Delete modal was visible in the source code for users that wasn't author of the recipe. It was causing the problem because everyone had access to modal where you can delete recipe. I fixed that with moving whole modal to the recipe loop.
+
+    ![Delete modal bug](documentation/modal-bug.png)
+
+4. Displaying two flash messages at once.
+
+    After deleting the recipe user could see two flash messages. I fixed that by putting second flash message in the else statement.
+
+    ![Two messages bug](documentation/bug-two-messages.png)
+
+## Unfixed
+
+1. Unknown bug with dropdown menu on the apple device
+
+    I'm aware about bug that happens on the apple device iPhone 12 Pro. Mobile dropdown menu is not working precisly all the time. Sometimes when user choose to go on the Login page it loads Register. It looks like sometimes the position of the dropdown menu is not precise. This issue only occur on the apple devices because on the android works well.
