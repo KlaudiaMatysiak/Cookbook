@@ -56,6 +56,14 @@ The types of data stored in MongoDB are:
 * Binary
 
 ## Collection Structure
+In this case, I have modelled my relational database on a non-relational database system, MongoDB. I have used the MongoDB best practice and guidance taught on the course when migrating relational database platforms to non-relational database platforms as my guide in this case. I have used the following mapping example:
+
+![mapping example](documentation/database.png)
+
+["How to Migrate Relational Database to MongoDB?: Made Easy", Raj Verma](https://hevodata.com/learn/author/raj-verma/)
+
+A dedicated relational database platform like MySQL or PostgreSQL could also have been used in this case.
+
 Cookbook relies on two database collections. 
 
 ### Users Collection
