@@ -136,7 +136,8 @@ def add_recipe():
 def edit_recipe(recipe_id):
     """Edit the recipe"""
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    if session['user'].lower() == recipe["added_by"].lower():
+    user = session['user'].lower()
+    if user == recipe["added_by"].lower() or user == "admin":
         if request.method == "POST":
             recipe = {
                 "title": request.form.get("title"),
@@ -160,8 +161,9 @@ def edit_recipe(recipe_id):
 @login_required
 def delete_recipe(recipe_id):
     """Delete a recipe"""
+    user = session['user'].lower()
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    if session['user'].lower() == recipe["added_by"].lower():
+    if user == recipe["added_by"].lower() or user == "admin":
         mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
         flash("Recipe Successfully Deleted!")
     else:
