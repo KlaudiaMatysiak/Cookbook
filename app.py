@@ -164,7 +164,8 @@ def delete_recipe(recipe_id):
     if session['user'].lower() == recipe["added_by"].lower():
         mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
         flash("Recipe Successfully Deleted!")
-    flash("You are not authorized to access this page.")
+    else:
+        flash("You are not authorized to access this page.")
     return redirect(url_for("get_recipes"))
 
 
