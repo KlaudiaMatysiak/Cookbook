@@ -1,4 +1,4 @@
-/* jshint esversion: 8, jquary: true */
+/* jshint esversion: 8, jquery: true */
 $(document).ready(function(){
     $(".dropdown-trigger").dropdown({
       coverTrigger: false,
