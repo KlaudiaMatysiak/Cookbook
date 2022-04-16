@@ -139,3 +139,32 @@ Direct links:
 ## Python [pep8online](http://pep8online.com/)
 
 ![Python Validator](documentation/validator-pep8.png)
+
+# Lighthouse DevTools
+
+![Lighthouse](documentation/lighthouse.png)
+
+![Lighthouse](documentation/lighthouse-recipes.png)
+
+![Lighthouse](documentation/lighthouse-selectedrecipe.png)
+
+![Lighthouse](documentation/lighthouse-addrecipe.png)
+
+# Devices
+
+## Google Chrome
+
+![Google Chrome](documentation/chrome.png)
+
+## Mozilla Firefox 
+
+![Firefox](documentation/mozilla.png)
+
+## Edge
+
+![Edge](documentation/edge.png)
+
+## iPhone 12 Pro
+
+![iPhone 12 Pro](documentation/ihpone12pro.jpg)
+
