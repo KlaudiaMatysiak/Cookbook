@@ -75,6 +75,144 @@ Password is entered as string, but stored as binary after encryption trough secu
 ### Recipes Collection
 ![Recipe collection](documentation/recipe-coll.png)
 
+# Features
+
+## Navbar
++ The navigation bar style is consistent. It navigates user through the website. Main bar includes links to the Home, Recipes, Log in and Register page and Cookbook logo with cookie font awesome icon.
+
+    ![Navbar](documentation/feature-navbar-desktop.png)
+
++ While user is logged in on the desktop view can see his username on the navbar. From it goes dropdown menu with two links: Add recipe and log out.
+
+    ![Navbar user dropdown](documentation/feature-user-dropdown-desktop.png)
+
++ On the mobile devices whole menu transform to hamburger button with the dropdown menu.
+
+    ![Mobile Dropdown menu logged out user](documentation/mobile-menu-loggedout.png)
+
+    ![Mobile Dropdown menu logged in user](documentation/mobile-dropdown-menu.jpg)
+
+## Hero Images
++ First hero image are chocolate muffins with blueberries and mint on the top. Image is very appealing and eencourage user to check recipes for sweets.
+
+    ![Hero Image 1](documentation/hero-image-1.png)
+
++ Second hero image is white cake with chocolate sauce on the top. It works well with whole website colour palette.
+
+    ![Hero Image 2](documentation/hero-image-2.png)
+
+## Welcome Text
+
++ Big welcome text on the Cookbook website. There is a brief explanation the purpose of the website and that user can create an account to add recipes.
+
+    ![Welcome Text](documentation/welcome-text.png)
+
++ Mobile View
+
+    ![Mobile Welcome Text](documentation/mobile-welcome-text.png)
+
+## Footer
++ Footer includes Font Awesome Icons that provides social media links to Twitter, YouTube and Discord. There is also developer's copyright.
+
+    ![Footer](documentation/footer.png)
+
+## Search 
++ Search bar is located on the recipes page. You can search recipe by title or interested ingredients.
+
+    ![Search](documentation/search.png)
+
+## Recipes Cards
++ Recipes are listed on the nice and tidy card tiles. One recipe card contain image, title, author and "SHOW RECIPE" button. If user is the author of the recipe, can also see buttons for editing and deleting it. 
+
+    ![Recipes cards](documentation/recipes.png)
+
++ Mobile View
+
+    ![Mobile recipe view](documentation/mobile-recipes.png)
+
+## Recipe Title and Image
++ Recipe title and image is displayed while user select desire recipe.
++ On the desktop view Title is situated on the left and Image on the right.
+
+    ![Desktop recipe title](documentation/recipe-title.png)
+
++ On the mobile view both element taking whole content width. 
+
+    ![Mobile recipe title](documentation/mobile-recipe-title.png)
+
+    ![Mobile recipe content](documentation/mobile-recipe-content.png)
+
+## GO BACK button
++ For better user experience there is also GO BACK button that redirect user to the recipes page from selected recipe content page. That means user don't need to select option from navbar.
+
+    ![GO BACK button](documentation/feature-recipe-goback.png)
+
+## Login
++ On the login page user need to provide username and password that used during registration. There is redirecting button to registration page for the new user.
++ Desktop View
+
+    ![Login Desktop](documentation/feature-login-desktop.png)
+
++ Mobile View
+
+    ![Login Mobile](documentation/mobile-login.png)
+
+## Register
++ On the register page user need to provide username and password to create an account. There is redirecting button to login page for already existing users.
++ Desktop View
+
+    ![Desktop Register](documentation/feature-register-desktop.png)
+
++ Mobile View
+
+    ![Desktop Register](documentation/mobile-register.png)
+
+## Add recipe
++ Logged in user can add recipe. The Add recipe page provide form with two inputs and two textarea. User need to fill one ingredient per line and one step of the method per line. For the image need to provide url link. To submit recipe user need to click "ADD RECIPE" button.
++ Desktop View
+
+    ![Desktop Add recipe](documentation/feature-add-recipe-desktop.png)
+
++ Mobile View
+
+    ![Mobile Add recipe](documentation/mobile-add-recipe.png)
+
+## Edit recipe
++ User can edit own recipes by clicking edit button on the specific recipe card. It redirect to edit recipe page. User either can cancel or update the process.
++ Buttons
+
+    ![Edit buttons](documentation/buttons-edit.png)
+
++ Desktop View
+
+    ![Desktop Edit recipe](documentation/feature-editrecipe-desktop.png)
+
++ Mobile View
+
+    ![Mobile Edit recipe](documentation/mobile-edit-recipe.png)
+
+## Log Out
++ User has option to log out on the navbar. After click on the log out link it's redirect to login page with message "You have been logged out"
++ Desktop View 
+
+    ![Desktop Log out](documentation/feature-logout-desktop.png)
+
++ Mobile View
+
+    ![Mobile Log out](documentation/mobile-logout.png)
+
+## Flash messages
++ Throught page and interaction with user there is couple of the flash messages.
+    + "Username already exists!"
+    + "Registration Succesfull!"
+    + "Incorrect Username and/or Password"
+    + "Welcome, >>user<<"
+    + "Recipe successfully added!"
+    + "Recipe successfully updated!"
+    + "Recipe Successfully Deleted!"
+    + "You have been logged out"
+    + "You are not authorized to access this page."
+
 # Technologies Used
 
 ## Languages Used
