@@ -216,6 +216,28 @@ Direct links:
 
     ![Two messages bug](documentation/bug-two-messages.png)
 
+5. User access to the edit page with direct link not being log in.
+
+    If user had access to the direct link for the edit recipe could see the content of the page. To fix that I applied @login_required decorator.
+
+    ![User access](documentation/bug-user-access.png)
+
+6. Cookie Font Icon had position bug on the mobile devices.
+
+    On the mobile devices there was problem with line height so to fix that I applied css rule of line height for the cookie icon to make sure that is all straight.
+
+    ```
+    @media only screen and (max-width: 600px) {
+        a.right.brand-logo.cookbook-logo > i {
+            line-height: 56px;
+        }
+    }
+    ```
+
+    ![Icon bug](documentation/bug-icon.png)
+
+    ![Mobile icon bug](documentation/mobile-bug-icon.png)
+
 ## Unfixed
 
 1. Unknown bug with dropdown menu on the apple device
