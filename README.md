@@ -181,6 +181,8 @@ Password is entered as string, but stored as binary after encryption trough secu
 + User can edit own recipes by clicking edit button on the specific recipe card. It redirect to edit recipe page. User either can cancel or update the process.
 + Buttons
 
+    ![Edit button](documentation/edit-button.png)
+
     ![Edit buttons](documentation/buttons-edit.png)
 
 + Desktop View
@@ -190,6 +192,20 @@ Password is entered as string, but stored as binary after encryption trough secu
 + Mobile View
 
     ![Mobile Edit recipe](documentation/mobile-edit-recipe.png)
+
+## Delete recipe
++ User can delete own recipe by clicking the delete button on the specific recipe card. It shows delete modal to double check if user want to delete recipe for sure.
++ Button
+
+    ![Delete button](documentation/delete-button.png)
+
++ Desktop Delete Modal
+
+    ![Delete modal](documentation/test-delete-modal.png)
+
++ Mobile Delete Modal
+
+    ![Mobile delete modal](documentation/mobile-delete-modal.png)
 
 ## Log Out
 + User has option to log out on the navbar. After click on the log out link it's redirect to login page with message "You have been logged out"
