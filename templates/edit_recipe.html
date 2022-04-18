@@ -2,9 +2,12 @@
 {% block content %}
 
     <div class="container">
+        <!-- page title -->
         <h3 class="center-align title">Edit Recipe</h3>
         <div class="row card-panel brown lighten-5">
+            <!-- edit recipe form -->
             <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+                <!-- recipe title -->
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="title" name="title" type="text" minlength="5" maxlength="50"
@@ -12,24 +15,28 @@
                         <label for="title">Recipe Title</label>
                     </div>
                 </div>
+                <!-- ingredients -->
                 <div class="row">
                     <div class="input-field col s12">
                     <textarea id="ingredients" name="ingredients" class="materialize-textarea" required>{{ recipe.ingredients|join("\n") }}</textarea>
                     <label for="ingredients">Ingredients</label>
                     </div>
                 </div>
+                <!-- method -->
                 <div class="row">
                     <div class="input-field col s12">
                     <textarea id="method" name="method" class="materialize-textarea" required>{{ recipe.method|join("\n") }}</textarea>
                     <label for="method">Method</label>
                     </div>
                 </div>
+                <!-- image url -->
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="image" name="image" type="text" class="validate" value="{{ recipe.image }}" required>
                         <label for="image">URL Image</label>
                     </div>
                 </div>
+                <!-- edit recipe button -->
                 <div class="row">
                     <div class="col s12 center-align">
                         <a href="{{ url_for('get_recipes') }}" class="btn-large red darken-2">

@@ -50,6 +50,7 @@ def get_recipes():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # find only recipes that user searched for
     """Searching for specific recipe"""
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
@@ -60,6 +61,7 @@ def search():
 def register():
     """register user"""
     if request.method == "POST":
+        # check if username exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -71,8 +73,9 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
+        # add user to database
         mongo.db.users.insert_one(register_user)
-
+        # put user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Succesfull!")
         return redirect(url_for("get_recipes"))
@@ -84,10 +87,12 @@ def register():
 def login():
     """login into the user account"""
     if request.method == "POST":
+        # check if username exists in database
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
+            # check hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
                         session["user"] = request.form.get("username").lower()
@@ -95,10 +100,12 @@ def login():
                             request.form.get("username")))
                         return redirect(url_for("get_recipes"))
             else:
+                # password do not match
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
+            # username does not exists
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
@@ -109,6 +116,7 @@ def login():
 def logout():
     """Log out user from website"""
     flash("You have been logged out")
+    # remove user from session cookie
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -128,6 +136,7 @@ def add_recipe():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added!")
         return redirect(url_for("get_recipes"))
+    # generate the form for new recipe
     return render_template("add_recipe.html")
 
 
@@ -135,9 +144,12 @@ def add_recipe():
 @login_required
 def edit_recipe(recipe_id):
     """Edit the recipe"""
+    # find recipe
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    # user session
     user = session['user'].lower()
     if user == recipe["added_by"].lower() or user == "admin":
+        # session["user"] is admin or user who created the recipe
         if request.method == "POST":
             recipe = {
                 "title": request.form.get("title"),
@@ -153,6 +165,7 @@ def edit_recipe(recipe_id):
             return render_template("show_recipe.html", recipe=title)
 
         return render_template("edit_recipe.html", recipe=recipe)
+    # incorrect user to edit the recipe
     flash("You are not authorized to access this page.")
     return redirect(url_for("get_recipes"))
 
@@ -161,12 +174,16 @@ def edit_recipe(recipe_id):
 @login_required
 def delete_recipe(recipe_id):
     """Delete a recipe"""
+    # user session
     user = session['user'].lower()
+    # find the recipe
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     if user == recipe["added_by"].lower() or user == "admin":
+        # session["user"] is admin or user who created the recipe
         mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
         flash("Recipe Successfully Deleted!")
     else:
+        # incorrect user to delete recipe
         flash("You are not authorized to access this page.")
     return redirect(url_for("get_recipes"))
 
@@ -174,7 +191,9 @@ def delete_recipe(recipe_id):
 @app.route("/recipe/<recipe_id>", methods=["GET", "POST"])
 def show_recipe(recipe_id):
     """Check full recipe page"""
+    # find recipe
     title = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    # render recipe template
     return render_template("show_recipe.html", recipe=title)
 
 

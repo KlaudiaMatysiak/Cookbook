@@ -3,12 +3,15 @@
 
     <div class="container">
         <div class="row show-recipe-header">
+            <!-- recipe title -->
             <h3 class="center-align title col s12 l8">{{ recipe.title }}</h3>
+            <!-- recipe image -->
             <div class="image-container col s12 l4 center-align">
                 <img src="{{ recipe.image }}" class="small-img" alt="{{ recipe.title }}">
             </div>
         </div>
         <div class="row card-panel brown lighten-2">
+            <!-- recipe ingredients and method -->
             <div class="col s12 l4">
                 <h4>Ingredients:</h4>
                 <ul>
@@ -30,6 +33,7 @@
                 </ol>
             </div>
         </div>
+        <!-- go back button -->
         <div class="col s12">
             <a href="{{ url_for('get_recipes') }}" class="btn-large brown darken-2">
                 <i class="fas fa-angle-double-left"></i> Go Back
